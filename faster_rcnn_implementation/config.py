@@ -1,9 +1,9 @@
 import torch
 
 #Hyperparameters
-BATCH_SIZE=6
+BATCH_SIZE=7
 RESIZE_TO=(256,224)
-NUM_EPOCHS=20
+NUM_EPOCHS=500
 NUM_WORKERS=0
 
 #Choosing between cpu or gpu

@@ -163,7 +163,7 @@ if __name__ == '__main__':
         cv2.waitKey(0)
 
     NUM_SAMPLES_TO_VISUALIZE = 5
-    for i in range(90,90+NUM_SAMPLES_TO_VISUALIZE):
+    for i in range(800,800+NUM_SAMPLES_TO_VISUALIZE):
         image, target = dataset[i]
         visualize_sample(image, target)
 
