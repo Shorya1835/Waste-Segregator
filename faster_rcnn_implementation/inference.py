@@ -37,7 +37,7 @@ ap_metric=mAP(num_labels=NUM_CLASSES)
 
 # define the detection threshold...
 # ... any detection having score below this will be discarded
-detection_threshold =0.25
+detection_threshold =0.35
 
 # to count the total number of images iterated through
 frame_count = 0
@@ -107,7 +107,7 @@ for i in range(len(test_images)):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 
                         2, lineType=cv2.LINE_AA)
         cv2.imshow('Prediction', orig_image)
-        cv2.waitKey(1)
+        cv2.waitKey(0)
         cv2.imwrite(f"inference_outputs/images/{image_name}.jpg", orig_image)
     print(f"Image {i+1} done...")
     print('-'*50)
