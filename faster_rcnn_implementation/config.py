@@ -2,7 +2,7 @@ import torch
 
 #Hyperparameters
 BATCH_SIZE=7
-RESIZE_TO=(256,224)
+RESIZE_TO=(256,224) 
 NUM_EPOCHS=500
 NUM_WORKERS=0
 
@@ -17,7 +17,7 @@ VALID_DIR='resized_data/validation'
 
 #classes: 0 index is reserved for background
 CLASSES=[
-    '__background__','Aluminium foil', 'Battery', 'Blister pack', 'Bottle', 'Bottle cap', 'Broken glass', 'Can', 'Carton', 'Cup', 'Food waste', 'Glass jar', 'Lid', 'Other plastic', 'Paper', 'Paper bag', 'Plastic bag & wrapper', 'Plastic container', 'Plastic glooves', 'Plastic utensils', 'Pop tab', 'Rope & strings', 'Scrap metal', 'Shoe', 'Squeezable tube', 'Straw', 'Styrofoam piece', 'Unlabeled litter', 'Cigarette']
+    '__background__','Aluminium foil', 'Bottle', 'Bottle cap', 'Broken glass', 'Can', 'Carton', 'Cup', 'Lid', 'Other plastic', 'Paper', 'Plastic bag & wrapper', 'Plastic container', 'Plastic utensils', 'Pop tab', 'Straw', 'Styrofoam piece','Cigarette','Others']
 
 NUM_CLASSES=len(CLASSES)
 

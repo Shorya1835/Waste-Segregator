@@ -1,6 +1,6 @@
 from config import (
     DEVICE, NUM_CLASSES, NUM_EPOCHS, OUT_DIR,
-    VISUALIZE_TRANSFORMED_IMAGES, NUM_WORKERS,
+    VISUALIZE_TRANSFORMED_IMAGES, NUM_WORKERS
 )
 from model import create_model
 from custom_utils import Averager, SaveBestModel, save_model, save_loss_plot
@@ -13,6 +13,8 @@ import torch
 import matplotlib.pyplot as plt
 import time
 plt.style.use('ggplot')
+
+
 
 # function for running training iterations
 def train(train_data_loader, model):
@@ -28,11 +30,12 @@ def train(train_data_loader, model):
         images, targets = data
 
         images = list(image.to(DEVICE) for image in images)
+        
         targets = [{k: v.to(DEVICE) for k, v in t.items()} for t in targets]
-
+        
         loss_dict = model(images, targets)
-
-        losses = sum(loss for loss in loss_dict.values())
+        
+        losses=sum(loss for loss in loss_dict.values())
         loss_value = losses.item()
         train_loss_list.append(loss_value)
 
@@ -52,7 +55,8 @@ def validate(valid_data_loader, model):
     print('Validating')
     global val_itr
     global val_loss_list
-    
+    model.roi_heads.box_predictor.cls_loss_func = torch.nn.CrossEntropyLoss()
+    model = model.to(DEVICE)
     # initialize tqdm progress bar
     prog_bar = tqdm(valid_data_loader, total=len(valid_data_loader))
     
@@ -85,8 +89,11 @@ if __name__ == '__main__':
      # initialize the model and move to the computation device
     model = create_model(num_classes=NUM_CLASSES)
     model = model.to(DEVICE)
+
     # get the model parameters
     params = [p for p in model.parameters() if p.requires_grad]
+
+
     # define the optimizer
     optimizer = torch.optim.Adam(model.parameters())
     

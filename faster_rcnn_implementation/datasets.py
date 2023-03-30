@@ -32,6 +32,14 @@ for a in anns:
     img_to_bboxes[a['image_id']].append(a['bbox'])
     img_to_labels[a['image_id']].append(categories[a['category_id']]['supercategory'])
 
+
+
+for key,value in img_to_labels.items():
+    for i,j in enumerate(value):
+        if j=='Paper bag' or j=='Scrap metal' or j=='Rope & strings' or j=='Food waste' or j=='Blister pack' or j=='Shoe' or j=='Squeezable tube' or j=='Glass jar' or j=='Plastic glooves' or j=='Battery' or j=='Unlabeled litter':
+            img_to_labels[key][i]='Others'
+                      
+
 #The dataset class
 class CustomDataset(Dataset):
     def __init__(self, dir_path, width, height, classes, transforms=None):
