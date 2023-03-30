@@ -1,3 +1,2 @@
-faster_rcnn_implementation/outputs/best_model_colab.pth filter=lfs diff=lfs merge=lfs -text
 faster_rcnn_implementation/outputs/last_model.pth filter=lfs diff=lfs merge=lfs -text
 faster_rcnn_implementation/outputs/best_model.pth filter=lfs diff=lfs merge=lfs -text
