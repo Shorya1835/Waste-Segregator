@@ -1,4 +1,41 @@
-'''
+
+# Syntax Error Project
+
+### Project Description
+
+The project uses object detection to detect waste in the wild, the model uses a pretrained faster rcnn resnet50 and is trained on the [taco dataset](http://tacodataset.org/).
+
+### Installation
+
+to clone the git repository use
+```
+git clone https://github.com/Shorya1835/Waste-Segregator
+```
+
+
+### Libraries Used
+
+ - Pytorch
+   - The model uses torch, torchvision for the model and torchmetrics to evaluate the model.
+- Numpy
+     - For arrays
+- Cv2 and matplotlib
+    - For visualization
+- albumentaions
+    - For transforming the data
+- glob
+    - To search for files 
+- Chitra and ppyboxes
+    - During data analysis for data conversion and plotting
+
+### Usage
+
+The model can detect waste in the wild and categorize it between 18 categories, which can be furhter mapped to recylable and organic, allowing effective waste segregation. The model has mAP of 6 percent, with highest 7 percent achieved.
+
+![An example](https://imgur.com/a/3rWJnAT)
+
+###Structure 
+```
 Faster_rcnn_implementation
 ├── config.py
 ├── custom_utils.py
@@ -16,4 +53,4 @@ Faster_rcnn_implementation
 │   ├── train
 │   └── validation
 └── train.py
-'''
+```
