@@ -1,5 +1,5 @@
 
-# Syntax Error Project
+# Waste Segregator
 
 ### Project Description
 
