@@ -32,7 +32,7 @@ git clone https://github.com/Shorya1835/Waste-Segregator
 
 The model can detect waste in the wild and categorize it between 18 categories, which can be furhter mapped to recylable and organic, allowing effective waste segregation. The model has mAP of 6 percent, with highest 7 percent achieved.
 
-![An example](https://imgur.com/a/3rWJnAT)
+![An example](https://imgur.com/axekldV)
 
 ###Structure 
 ```
