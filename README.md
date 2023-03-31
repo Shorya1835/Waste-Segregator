@@ -35,6 +35,7 @@ The model can detect waste in the wild and categorize it between 18 categories, 
 ![An example](https://i.imgur.com/axekldV.png)
 
 ###Structure 
+
 ```
 Faster_rcnn_implementation
 ├── config.py
