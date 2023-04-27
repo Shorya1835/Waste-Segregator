@@ -5,9 +5,16 @@
 
 The project uses object detection to detect waste in the wild, the model uses a pretrained faster rcnn resnet50 and is trained on the [taco dataset](http://tacodataset.org/).
 
+### Prerequisites
+
+You can install the libraries needed using
+```
+pip install -r requirements.txt
+```
+
 ### Installation
 
-to clone the git repository use
+To clone the git repository use
 ```
 git clone https://github.com/Shorya1835/Waste-Segregator.git
 ```
