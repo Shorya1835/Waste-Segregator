@@ -9,7 +9,7 @@ The project uses object detection to detect waste in the wild, the model uses a 
 
 to clone the git repository use
 ```
-git clone https://github.com/Shorya1835/Waste-Segregator
+git clone https://github.com/Shorya1835/Waste-Segregator.git
 ```
 
 
