@@ -11,6 +11,7 @@ You can install the libraries needed using
 ```
 pip install -r requirements.txt
 ```
+The python version used in the project is 3.10.11
 
 ### Installation
 
